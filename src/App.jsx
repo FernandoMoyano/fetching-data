@@ -1,14 +1,17 @@
-import useFetch  from "./useFetch";
+import useFetch from "./useFetch";
 import "./App.css";
 
 function App() {
-  const { data } = useFetch("https://jsonplaceholder.typicode.com/users");
+  const { data, loading } = useFetch(
+    "https://jsonplaceholder.typicode.com/users"
+  );
 
   return (
     <div>
       <h3>Fetching</h3>
       <div>
         <ul>
+          {loading && <li>Loading...</li>}
           {data?.map((user) => (
             <li key={user.id}>{user.name}</li>
           ))}
