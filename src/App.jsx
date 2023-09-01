@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import useFetch  from "./useFetch";
 import "./App.css";
 
 function App() {
-  
+  const { data } = useFetch("https://jsonplaceholder.typicode.com/users");
+
   return (
     <div>
       <h3>Fetching</h3>
