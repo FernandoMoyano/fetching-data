@@ -1,6 +1,5 @@
 //RENDER AS YOU FETCH
 import { Suspense } from "react";
-import { fetchData } from "./useFetch2";
 import "./App.css";
 
 const apiData = fetch("https://jsonplaceholder.typicode.com/users");
